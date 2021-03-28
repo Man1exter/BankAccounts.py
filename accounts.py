@@ -17,10 +17,11 @@ def menu1():
 
 
 def logins():
+    plik = open("konta","a")
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
-        
+
         print("======================================")
         login = input("podaj login do konta => ")
         haslo = input("podaj haslo do hasla => ")
@@ -40,6 +41,26 @@ def logins():
         print("DODATKOWE INFORMACJE DO KONTA : ")
         login = input("podaj login => ")
         haslo = input("podaj haslo => ")
+
+        if plik.writable():
+          plik.write(imie )
+          plik.write(" ")
+          plik.write( nazwisko )
+          plik.write(" ")
+          plik.write( wiek )
+          plik.write(" ")
+          plik.write( nrtel )
+          plik.write(" ")
+          plik.write( pesel )
+          plik.write(" ")
+          plik.write( zawod )
+          plik.write(" ")
+          plik.write( login )
+          plik.write(" ")
+          plik.write( haslo )
+          plik.write(" ")
+          plik.write("\n")
+          
         print("======================================")
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
         print("ZAPAMIETAJ LOGIN I HASLO DO KONTA")
