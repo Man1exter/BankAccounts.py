@@ -20,12 +20,15 @@ def logins():
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
-
+        
+        print("======================================")
         login = input("podaj login do konta => ")
         haslo = input("podaj haslo do hasla => ")
+        print("WITAJ NA KONCIE " + login )
+        print("======================================")
         
     elif zdarzenie == 2:
-        
+
         print("======================================")
         print("PODAJ DANE POTRZEBNE DO REJESTRACJI")
         imie = input("Podaj imie => ")
@@ -37,6 +40,9 @@ def logins():
         print("DODATKOWE INFORMACJE DO KONTA : ")
         login = input("podaj login => ")
         haslo = input("podaj haslo => ")
+        print("======================================")
+        print("TWOJE DANE ZOSTALY DODANE DO KONTA")
+        print("ZAPAMIETAJ LOGIN I HASLO DO KONTA")
         print("======================================")
 
 menu1()
