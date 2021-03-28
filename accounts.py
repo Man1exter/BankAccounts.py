@@ -1,3 +1,13 @@
+class Rejestrowany:
+    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.wiek = wiek
+        self.nrtel = nrtel
+        self.pesel = pesel
+        self.zawod = zawod
+
+
 def menu1():
  print("WITAJ W BANKU MAN1EXTERA")
  print("=========================")
@@ -7,7 +17,7 @@ def menu1():
 
 
 def logins():
-    zdarzenie = input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> ")
+    zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
         print("ok")
