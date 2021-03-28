@@ -20,9 +20,24 @@ def logins():
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
-        print("ok")
+
+        login = input("podaj login do konta => ")
+        haslo = input("podaj haslo do hasla => ")
+        
     elif zdarzenie == 2:
-        print("ok")
+        
+        print("======================================")
+        print("PODAJ DANE POTRZEBNE DO REJESTRACJI")
+        imie = input("Podaj imie => ")
+        nazwisko = input("Podaj nazwisko => ")
+        wiek = input("Podaj wiek => ")
+        nrtel = input("Podaj nrtel => ")
+        pesel = input("Podaj pesel => ")
+        zawod = input("Podaj zawod => ")
+        print("DODATKOWE INFORMACJE DO KONTA : ")
+        login = input("podaj login => ")
+        haslo = input("podaj haslo => ")
+        print("======================================")
 
 menu1()
 logins()
