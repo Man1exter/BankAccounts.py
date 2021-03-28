@@ -12,10 +12,14 @@ class KontoBankowe:
     def stanKonta(self):
         return self.__stan
 
-    @stanKonta.getter # pobieranie danych z konta
+    @stanKonta.getter # pobieranie danych z konta...
     def stanKonta(self):
-        return "stan twojego konta => " + str(self.__stan) + " zl"
+        return "stan twojego konta => " + str(self.__stan) + " <= PLN"
 
+    @stanKonta.setter # zmiany na koncie...
+    def stanKonta(self,value):
+        self.__stan += value
+        
 
 def menu1():
  print("WITAJ W BANKU MAN1EXTERA")
