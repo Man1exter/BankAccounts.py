@@ -1,11 +1,20 @@
-class Rejestrowany:
-    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod):
+class KontoBankowe:
+    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
         self.imie = imie
         self.nazwisko = nazwisko
         self.wiek = wiek
         self.nrtel = nrtel
         self.pesel = pesel
         self.zawod = zawod
+        self.__stan = __stan
+
+    @property
+    def stanKonta(self):
+        return self.__stan
+
+    @stanKonta.getter # pobieranie danych z konta
+    def stanKonta(self):
+        return "stan twojego konta => " + str(self.__stan) + " zl"
 
 
 def menu1():
@@ -17,7 +26,7 @@ def menu1():
 
 
 def logins():
-    plik = open("konta","a")
+    plik = open("konta.txt","a")
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
@@ -63,7 +72,7 @@ def logins():
           
         print("======================================")
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
-        print("ZAPAMIETAJ LOGIN I HASLO DO KONTA")
+        print("ZAPAMIETAJ ((LOGIN)) I ((HASLO)) DO KONTA")
         print("======================================")
 
 menu1()
