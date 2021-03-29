@@ -53,9 +53,9 @@ def logins():
             konto = KontoBankowe()
             print(konto.stanKonta())
         elif celMenu == 2:
-            print("ok")
+            wyplata()
         elif celMenu == 3:
-            print("ok")
+            wplata()
         elif celMenu == 4:
             exit()
         
@@ -99,6 +99,12 @@ def logins():
         print("======================================")
     else:
         print("nie wiem co chcesz zrobic..")
+
+def wyplata():
+    wyplata = input("Ile chcesz wyplacic z konta? => ")
+
+def wplata():
+    wplata = input("Ile chcesz wplacic na konto? => ")
 
 menu1()
 logins()
