@@ -1,3 +1,4 @@
+import linecache
 class KontoBankowe:
     def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod):
         self.imie = imie
