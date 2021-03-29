@@ -1,3 +1,4 @@
+import linecache
 class KontoBankowe:
     def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
         self.imie = imie
@@ -53,11 +54,11 @@ def logins():
             konto = KontoBankowe()
             print(konto.stanKonta())
         elif celMenu == 2:
-            print("ok")
+            wyplata()
         elif celMenu == 3:
-            print("ok")
+            wplata()
         elif celMenu == 4:
-            print("ok")
+            exit()
         
     elif zdarzenie == 2:
 
@@ -99,6 +100,30 @@ def logins():
         print("======================================")
     else:
         print("nie wiem co chcesz zrobic..")
+
+def wyplata():
+    konto = KontoBankowe()
+    wyplata = int(input("Ile chcesz wyplacic z konta? => "))
+    wyplata = konto.__stan + wyplata
+    print(konto.__stan)
+
+    zrodlo = open("konta.txt").readlines()
+    cel = open("konta.txt","w")
+    for text in zrodlo:
+        cel.write(text.replace(konto.__stan,wyplata))
+    cel.close
+
+def wplata():
+    konto = KontoBankowe()
+    wplata = int(input("Ile chcesz wplacic na konto? => "))
+    wplata = konto.__stan - wplata
+    print(konto.__stan)
+
+    zrodlo = open("konta.txt").readlines()
+    cel = open("konta.txt","w")
+    for text in zrodlo:
+        cel.write(text.replace(konto.__stan,wplata))
+    cel.close
 
 menu1()
 logins()
