@@ -41,15 +41,16 @@ def logins():
         print("WITAJ NA KONCIE " + login )
         print("======================================")
 
-        celMenu = input("Operacja =========> ")
 
         print("CO CHCESZ ZROBIC NA SWOIM KONCIE?")
         print("[1] zobaczenie salda na koncie")
         print("[2] wyplata pieniedzy z konta")
-        print("[3] wplata pieniedzy do konta")
+        print("[3] wplata pieniedzy na konto")
+        celMenu = int(input("Operacja =========> "))
 
         if celMenu == 1:
-            print("ok")
+            konto = KontoBankowe()
+            print(konto.stanKonta())
         elif celMenu == 2:
             print("ok")
         elif celMenu == 3:
@@ -87,10 +88,11 @@ def logins():
           plik.write( haslo )
           plik.write(" ")
           plik.write("\n")
+        plik.close()
           
         print("======================================")
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
-        print("ZAPAMIETAJ ((LOGIN)) I ((HASLO)) DO KONTA")
+        print("ZAPAMIETAJ ((=> LOGIN <=)) I ((=> HASLO <=)) DO KONTA")
         print("======================================")
 
 menu1()
