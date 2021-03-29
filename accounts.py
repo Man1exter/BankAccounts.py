@@ -23,10 +23,11 @@ class KontoBankowe:
         
 
 def menu1():
- print("WITAJ W BANKU MAN1EXTERA")
+ print("WITAJ W BANKU [MAN1EXTERA]")
  print("=========================")
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
+ print("[3] ====> INFORMACJE O KONTACH <====")
  print("=========================")
 
 
@@ -47,7 +48,7 @@ def logins():
         print("[1] zobaczenie salda na koncie")
         print("[2] wyplata pieniedzy z konta")
         print("[3] wplata pieniedzy na konto")
-        print("[4] wyjscie")
+        print("[4] wyjscie z programu")
         celMenu = int(input("Operacja =========> "))
 
         if celMenu == 1:
