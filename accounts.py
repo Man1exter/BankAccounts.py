@@ -46,6 +46,7 @@ def logins():
         print("[1] zobaczenie salda na koncie")
         print("[2] wyplata pieniedzy z konta")
         print("[3] wplata pieniedzy na konto")
+        print("[4] wyjscie")
         celMenu = int(input("Operacja =========> "))
 
         if celMenu == 1:
@@ -54,6 +55,8 @@ def logins():
         elif celMenu == 2:
             print("ok")
         elif celMenu == 3:
+            print("ok")
+        elif celMenu == 4:
             print("ok")
         
     elif zdarzenie == 2:
@@ -94,6 +97,8 @@ def logins():
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
         print("ZAPAMIETAJ ((=> LOGIN <=)) I ((=> HASLO <=)) DO KONTA")
         print("======================================")
+    else:
+        print("nie wiem co chcesz zrobic..")
 
 menu1()
 logins()
