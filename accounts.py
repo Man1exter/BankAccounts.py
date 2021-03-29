@@ -27,7 +27,7 @@ def menu1():
  print("=========================")
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
- print("[3] ====> INFORMACJE O KONTACH <====")
+ print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
  print("=========================")
 
 
@@ -102,6 +102,10 @@ def logins():
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
         print("ZAPAMIETAJ ((=> LOGIN <=)) I ((=> HASLO <=)) DO KONTA")
         print("======================================")
+
+    elif zdarzenie == 3:
+        info()
+
     else:
         print("nie wiem co chcesz zrobic..")
 
@@ -128,6 +132,9 @@ def wplata():
     for text in zrodlo:
         cel.write(text.replace(konto.__stan,wplata))
     cel.close
+
+def info():
+    print(" ===> INFORMACJE O KONTACH UZYTKOWNIKOW <===")
 
 menu1()
 logins()
