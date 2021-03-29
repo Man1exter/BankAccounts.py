@@ -91,6 +91,9 @@ def logins():
           plik.write(" ")
           plik.write( haslo )
           plik.write(" ")
+          konto = KontoBankowe()
+          plik.write( konto.__stan )
+          plik.write(" ")
           plik.write("\n")
         plik.close()
           
