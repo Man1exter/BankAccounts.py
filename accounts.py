@@ -1,12 +1,13 @@
 import linecache
 class KontoBankowe:
-    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod):
+    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
         self.imie = imie
         self.nazwisko = nazwisko
         self.wiek = wiek
         self.nrtel = nrtel
         self.pesel = pesel
         self.zawod = zawod
+        self.__stan = __stan
 
     @property
     def stanKonta(self):
@@ -103,7 +104,7 @@ def logins():
 def wyplata():
     konto = KontoBankowe()
     wyplata = int(input("Ile chcesz wyplacic z konta? => "))
-    konto.__stan = -wyplata
+    konto.__stan = konto.__stan + wyplata
     print(konto.__stan)
 
     zrodlo = open("konta.txt").readlines()
@@ -115,7 +116,7 @@ def wyplata():
 def wplata():
     konto = KontoBankowe()
     wplata = int(input("Ile chcesz wplacic na konto? => "))
-    konto.__stan = wplata
+    konto.__stan = konto.__stan - wplata
     print(konto.__stan)
 
     zrodlo = open("konta.txt").readlines()
