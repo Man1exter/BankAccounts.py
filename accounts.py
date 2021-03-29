@@ -104,25 +104,25 @@ def logins():
 def wyplata():
     konto = KontoBankowe()
     wyplata = int(input("Ile chcesz wyplacic z konta? => "))
-    konto.__stan = konto.__stan + wyplata
+    wyplata = konto.__stan + wyplata
     print(konto.__stan)
 
     zrodlo = open("konta.txt").readlines()
     cel = open("konta.txt","w")
     for text in zrodlo:
-        cel.write(text.replace("zmiana czego","na co"))
+        cel.write(text.replace(konto.__stan,wyplata))
     cel.close
 
 def wplata():
     konto = KontoBankowe()
     wplata = int(input("Ile chcesz wplacic na konto? => "))
-    konto.__stan = konto.__stan - wplata
+    wplata = konto.__stan - wplata
     print(konto.__stan)
 
     zrodlo = open("konta.txt").readlines()
     cel = open("konta.txt","w")
     for text in zrodlo:
-        cel.write(text.replace("zmiana czego","na co"))
+        cel.write(text.replace(konto.__stan,wplata))
     cel.close
 
 menu1()
