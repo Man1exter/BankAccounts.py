@@ -57,7 +57,7 @@ def logins():
         elif celMenu == 3:
             print("ok")
         elif celMenu == 4:
-            print("ok")
+            exit()
         
     elif zdarzenie == 2:
 
