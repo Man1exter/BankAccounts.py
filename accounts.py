@@ -1,12 +1,11 @@
 class KontoBankowe:
-    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
+    def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod):
         self.imie = imie
         self.nazwisko = nazwisko
         self.wiek = wiek
         self.nrtel = nrtel
         self.pesel = pesel
         self.zawod = zawod
-        self.__stan = __stan
 
     @property
     def stanKonta(self):
@@ -101,10 +100,16 @@ def logins():
         print("nie wiem co chcesz zrobic..")
 
 def wyplata():
-    wyplata = input("Ile chcesz wyplacic z konta? => ")
+    konto = KontoBankowe()
+    wyplata = int(input("Ile chcesz wyplacic z konta? => "))
+    konto.__stan = -wyplata
+    print(konto.__stan)
 
 def wplata():
-    wplata = input("Ile chcesz wplacic na konto? => ")
+    konto = KontoBankowe()
+    wplata = int(input("Ile chcesz wplacic na konto? => "))
+    konto.__stan = wplata
+    print(konto.__stan)
 
 menu1()
 logins()
