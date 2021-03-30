@@ -29,6 +29,8 @@ def menu1():
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
  print("=========================")
+ print("[4] ====> * * ADMINISTRACJA * * <====")
+
 
 
 def logins():
@@ -92,9 +94,6 @@ def logins():
           plik.write(" ")
           plik.write( haslo )
           plik.write(" ")
-          konto = KontoBankowe()
-          plik.write( konto.__stan )
-          plik.write(" ")
           plik.write("\n")
         plik.close()
           
@@ -106,8 +105,11 @@ def logins():
     elif zdarzenie == 3:
         info()
 
+    elif zdarzenie == 4:
+        adminowania()
+
     else:
-        print("nie wiem co chcesz zrobic..")
+        print("nie wiem co chcesz zrobic..,ZACZNIJ OD NOWA")
 
 def wyplata():
     konto = KontoBankowe()
@@ -146,5 +148,13 @@ def info():
         if plik2.readable():
             tekst2 = plik1.read()
         print(tekst2)
+
+def adminowania():
+    print("WITAJ W PANELU ADMINA")
+    plik = open("konta.txt","r")
+    if plik.readable():
+        tekstX = plik.read()
+    print(tekstX)
+
 menu1()
 logins()
