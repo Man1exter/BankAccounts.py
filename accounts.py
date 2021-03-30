@@ -151,6 +151,10 @@ def info():
 
 def adminowania():
     print("WITAJ W PANELU ADMINA")
-    
+    plik = open("konta.txt","r")
+    if plik.readable():
+        tekstX = plik.read()
+    print(tekstX)
+
 menu1()
 logins()
