@@ -129,6 +129,9 @@ def wplata():
     wplata = konto.__stan - wplata
     print(konto.__stan)
 
+    waluta = input("W jakiej walucie? => ")
+    print("Twoja wplata => ",wplata + waluta)
+
     zrodlo = open("konta.txt").readlines()
     cel = open("konta.txt","w")
     for text in zrodlo:
