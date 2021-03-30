@@ -23,10 +23,11 @@ class KontoBankowe:
         
 
 def menu1():
- print("WITAJ W BANKU MAN1EXTERA")
+ print("WITAJ W BANKU [MAN1EXTERA]")
  print("=========================")
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
+ print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
  print("=========================")
 
 
@@ -47,7 +48,7 @@ def logins():
         print("[1] zobaczenie salda na koncie")
         print("[2] wyplata pieniedzy z konta")
         print("[3] wplata pieniedzy na konto")
-        print("[4] wyjscie")
+        print("[4] wyjscie z programu")
         celMenu = int(input("Operacja =========> "))
 
         if celMenu == 1:
@@ -91,6 +92,9 @@ def logins():
           plik.write(" ")
           plik.write( haslo )
           plik.write(" ")
+          konto = KontoBankowe()
+          plik.write( konto.__stan )
+          plik.write(" ")
           plik.write("\n")
         plik.close()
           
@@ -98,6 +102,10 @@ def logins():
         print("TWOJE DANE ZOSTALY DODANE DO KONTA")
         print("ZAPAMIETAJ ((=> LOGIN <=)) I ((=> HASLO <=)) DO KONTA")
         print("======================================")
+
+    elif zdarzenie == 3:
+        info()
+
     else:
         print("nie wiem co chcesz zrobic..")
 
@@ -125,5 +133,18 @@ def wplata():
         cel.write(text.replace(konto.__stan,wplata))
     cel.close
 
+def info():
+    print(" ===> INFORMACJE O KONTACH UZYTKOWNIKOW <===")
+    stand = input("KONTO ===> [1]premium czy [2]standard? : ")
+    plik1 = open("standrard.txt","r")
+    plik2 = open("premium.txt","r")
+    if stand == 1:
+        if plik1.readable():
+            tekst1 = plik1.read()
+        print(tekst1)
+    elif stand == 2:
+        if plik2.readable():
+            tekst2 = plik1.read()
+        print(tekst2)
 menu1()
 logins()
