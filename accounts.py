@@ -135,7 +135,16 @@ def wplata():
 
 def info():
     print(" ===> INFORMACJE O KONTACH UZYTKOWNIKOW <===")
-    stand = input("KONTO ===> premium czy standardowe? : ")
-    
+    stand = input("KONTO ===> [1]premium czy [2]standard? : ")
+    plik1 = open("standrard.txt","r")
+    plik2 = open("premium.txt","r")
+    if stand == 1:
+        if plik1.readable():
+            tekst1 = plik1.read()
+        print(tekst1)
+    elif stand == 2:
+        if plik2.readable():
+            tekst2 = plik1.read()
+        print(tekst2)
 menu1()
 logins()
