@@ -135,6 +135,7 @@ def wplata():
 
 def info():
     print(" ===> INFORMACJE O KONTACH UZYTKOWNIKOW <===")
-
+    stand = input("KONTO ===> premium czy standardowe? : ")
+    
 menu1()
 logins()
