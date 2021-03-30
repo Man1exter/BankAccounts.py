@@ -29,6 +29,8 @@ def menu1():
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
  print("=========================")
+ print("[4] ====> * * ADMINISTRACJA * * <====")
+
 
 
 def logins():
@@ -103,6 +105,9 @@ def logins():
     elif zdarzenie == 3:
         info()
 
+    elif zdarzenie == 4:
+        adminowania()
+
     else:
         print("nie wiem co chcesz zrobic..,ZACZNIJ OD NOWA")
 
@@ -143,5 +148,9 @@ def info():
         if plik2.readable():
             tekst2 = plik1.read()
         print(tekst2)
+
+def adminowania():
+    print("WITAJ W PANELU ADMINA")
+    
 menu1()
 logins()
