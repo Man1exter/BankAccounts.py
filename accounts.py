@@ -107,7 +107,7 @@ def logins():
         info()
 
     else:
-        print("nie wiem co chcesz zrobic..")
+        print("nie wiem co chcesz zrobic..,ZACZNIJ OD NOWA")
 
 def wyplata():
     konto = KontoBankowe()
