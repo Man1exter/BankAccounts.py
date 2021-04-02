@@ -1,4 +1,5 @@
 import linecache
+import time
 class KontoBankowe:
     def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
         self.imie = imie
@@ -13,7 +14,6 @@ class KontoBankowe:
         self.payments = payments
         self.payments2 = payments2
 
-
     @property
     def stanKonta(self):
         return self.__stan
@@ -25,6 +25,14 @@ class KontoBankowe:
     @stanKonta.setter # zmiany na koncie...
     def stanKonta(self,value):
         self.__stan += value
+
+def timen():
+        print(" ")
+        print(" ")
+        print("Aktualna data....")
+        ctime = time.localtime()
+        print(ctime.tm_year,ctime.tm_mon,ctime.tm_isdst)
+        print(ctime.tm_hour,ctime.tm_min,ctime.tm_sec,sep=":")
         
 
 def menu1():
@@ -50,7 +58,6 @@ def logins():
         haslo = input("podaj haslo do hasla => ")
         print("WITAJ NA KONCIE " + login )
         print("======================================")
-
 
         print("CO CHCESZ ZROBIC NA SWOIM KONCIE?")
         print("[1] zobaczenie salda na koncie")
@@ -222,6 +229,6 @@ def balance():
     print(" = > BALANS sfery kont [MAN1EXTER'A] < = ")
     print(" ")
     
-
+timen()
 menu1()
 logins()
