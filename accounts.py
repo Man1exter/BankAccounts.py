@@ -28,8 +28,9 @@ def menu1():
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
+ print("[4] ====> PRZELICZNIK WALUT <====")
  print("=========================")
- print("[4] ====> * * ADMINISTRACJA * * <====")
+ print("[5] ====> * * ADMINISTRACJA * * <====")
 
 
 
@@ -61,6 +62,8 @@ def logins():
         elif celMenu == 3:
             wplata()
         elif celMenu == 4:
+            walutowy()
+        elif celMenu == 5:
             exit()
         
     elif zdarzenie == 2:
@@ -151,6 +154,11 @@ def info():
         if plik2.readable():
             tekst2 = plik1.read()
         print(tekst2)
+
+def walutowy():
+    print(" ")
+    print("..PRZELICZNIK WALUTOWY..")
+    print(" ")
 
 def adminowania():
     print("WITAJ W PANELU ADMINA")
