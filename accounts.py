@@ -50,7 +50,6 @@ def logins():
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
 
     if zdarzenie == 1:
-
         print("======================================")
         login = input("podaj login do konta => ")
         haslo = input("podaj haslo do hasla => ")
@@ -175,42 +174,35 @@ def walutowy():
     print(" ")
     print("..PRZELICZNIK WALUTOWY..")
     print(" ")
-
     print("[1] EURO")
     print("[2] DOLAR")
     print("[3] RUBLE")
     print("[4] BOLIWAR")
-
     print(" ")
     walut = int(input("Jaka waluta ===> "))
     kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
     print(" ")
-
     ile1 = float(4.60)
     ile2 = float(3.90)
     ile3 = float(0.051)
     ile4 = float(0.0000019653)
 
     if walut == 1:
-
         print("na euro")
         euro = kwota * ile1
         print(kwota + " na " + euro)
         
     elif walut == 2:
-
         print("na dolar")
         dolar = kwota * ile2
         print(kwota + " na " + dolar)
 
     elif walut == 3:
-
         print("na ruble")
         rubla = kwota * ile3
         print(kwota + " na " + rubla)
 
     elif walut == 4:
-
         print("na boliwar")
         boliwar = kwota * ile4
         print(kwota + " na " + boliwar)
