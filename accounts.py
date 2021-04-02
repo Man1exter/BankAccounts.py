@@ -1,4 +1,5 @@
 import linecache
+import time
 class KontoBankowe:
     def __init__(self,imie,nazwisko,wiek,nrtel,pesel,zawod,__stan):
         self.imie = imie
@@ -13,7 +14,6 @@ class KontoBankowe:
         self.payments = payments
         self.payments2 = payments2
 
-
     @property
     def stanKonta(self):
         return self.__stan
@@ -25,6 +25,14 @@ class KontoBankowe:
     @stanKonta.setter # zmiany na koncie...
     def stanKonta(self,value):
         self.__stan += value
+
+def timen():
+        print(" ")
+        print(" ")
+        print("Aktualna data....")
+        ctime = time.localtime()
+        print(ctime.tm_year,ctime.tm_mon,ctime.tm_isdst)
+        print(ctime.tm_hour,ctime.tm_min,ctime.tm_sec,sep=":")
         
 
 def menu1():
@@ -33,10 +41,10 @@ def menu1():
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
- print("[4] ====> PRZELICZNIK WALUT <====")
+ print("[4] ====> BALANS KONT MAN1EXTER'A <====")
+ print("[5] ====> PRZELICZNIK WALUT <====")
  print("=========================")
- print("[5] ====> * * ADMINISTRACJA * * <====")
-
+ print("[6] ====> * * ADMINISTRACJA * * <====")
 
 
 def logins():
@@ -50,7 +58,6 @@ def logins():
         haslo = input("podaj haslo do hasla => ")
         print("WITAJ NA KONCIE " + login )
         print("======================================")
-
 
         print("CO CHCESZ ZROBIC NA SWOIM KONCIE?")
         print("[1] zobaczenie salda na koncie")
@@ -67,8 +74,6 @@ def logins():
         elif celMenu == 3:
             wplata()
         elif celMenu == 4:
-            walutowy()
-        elif celMenu == 5:
             exit()
         
     elif zdarzenie == 2:
@@ -120,6 +125,12 @@ def logins():
         info()
 
     elif zdarzenie == 4:
+        balance()
+    
+    elif zdarzenie == 5:
+        walutowy()
+
+    elif zdarzenie == 6:
         adminowania()
 
     else:
@@ -205,7 +216,6 @@ def walutowy():
         boliwar = kwota * 0.0000019653 
         print(kwota + " na " + boliwar)
 
-
 def adminowania():
     print("WITAJ W PANELU ADMINA")
     plik = open("konta.txt","r")
@@ -213,5 +223,21 @@ def adminowania():
         tekstX = plik.read()
     print(tekstX)
 
+def balance():
+    print(" ")
+    print(" ")
+    print(" = > BALANS sfery kont [[[MAN1EXTER'A]]] < = ")
+    print(" ")
+    i = 0
+    while i < 10:
+     print("chce konto..")
+     time.sleep(1)
+     print("nie chce konta")
+     print(" ")
+     i += 1
+     if i < 10:
+        print("nie moge sie zdecydowac")
+    
+timen()
 menu1()
 logins()
