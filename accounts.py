@@ -28,8 +28,9 @@ def menu1():
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
+ print("[4] ====> PRZELICZNIK WALUT <====")
  print("=========================")
- print("[4] ====> * * ADMINISTRACJA * * <====")
+ print("[5] ====> * * ADMINISTRACJA * * <====")
 
 
 
@@ -61,6 +62,8 @@ def logins():
         elif celMenu == 3:
             wplata()
         elif celMenu == 4:
+            walutowy()
+        elif celMenu == 5:
             exit()
         
     elif zdarzenie == 2:
@@ -129,6 +132,9 @@ def wplata():
     wplata = konto.__stan - wplata
     print(konto.__stan)
 
+    waluta = input("W jakiej walucie? => ")
+    print("Twoja wplata => ",wplata + waluta)
+
     zrodlo = open("konta.txt").readlines()
     cel = open("konta.txt","w")
     for text in zrodlo:
@@ -148,6 +154,39 @@ def info():
         if plik2.readable():
             tekst2 = plik1.read()
         print(tekst2)
+
+def walutowy():
+    print(" ")
+    print("..PRZELICZNIK WALUTOWY..")
+    print(" ")
+
+    print("[1] EURO")
+    print("[2] DOLAR")
+    print("[3] RUBLE")
+    print("[4] BOLIWAR")
+
+    print(" ")
+    walut = int(input("Jaka waluta ===> "))
+    kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
+    print(" ")
+
+    if walut == 1:
+        print("na euro")
+        euro = kwota * 4.60
+        print(kwota + " na " + euro)
+    elif walut == 2:
+        print("na dolar")
+        dolar = kwota * 3.91
+        print(kwota + " na " + dolar)
+    elif walut == 3:
+        print("na ruble")
+        rubla = kwota * 0.051
+        print(kwota + " na " + rubla)
+    elif walut == 4:
+        print("na boliwar")
+        boliwar = kwota * 0.0000019653 
+        print(kwota + " na " + boliwar)
+
 
 def adminowania():
     print("WITAJ W PANELU ADMINA")
