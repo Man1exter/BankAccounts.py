@@ -84,8 +84,8 @@ def logins():
         print("DODATKOWE INFORMACJE DO KONTA : ")
         login = input("podaj login => ")
         haslo = input("podaj haslo => ")
-        payments = input("karta1 czy karta2 ==>")
-        payments2 = input("karta3 czy karta4 ==>")
+        payments = input("karta1[blue] czy karta2[red] ==>")
+        payments2 = input("karta3[white] czy karta4[brown] ==>")
 
         if plik.writable():
           plik.write(imie )
