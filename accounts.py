@@ -171,18 +171,25 @@ def walutowy():
     print(" ")
 
     if walut == 1:
+
         print("na euro")
         euro = kwota * 4.60
         print(kwota + " na " + euro)
+        
     elif walut == 2:
+
         print("na dolar")
         dolar = kwota * 3.91
         print(kwota + " na " + dolar)
+
     elif walut == 3:
+
         print("na ruble")
         rubla = kwota * 0.051
         print(kwota + " na " + rubla)
+        
     elif walut == 4:
+
         print("na boliwar")
         boliwar = kwota * 0.0000019653 
         print(kwota + " na " + boliwar)
