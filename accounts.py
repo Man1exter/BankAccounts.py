@@ -159,6 +159,10 @@ def walutowy():
     print(" ")
     print("..PRZELICZNIK WALUTOWY..")
     print(" ")
+    kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
+    walut = int(input("Jaka waluta ===> "))
+    print(" ")
+
 
 def adminowania():
     print("WITAJ W PANELU ADMINA")
