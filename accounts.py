@@ -159,9 +159,24 @@ def walutowy():
     print(" ")
     print("..PRZELICZNIK WALUTOWY..")
     print(" ")
-    kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
-    walut = int(input("Jaka waluta ===> "))
+
+    print("[1] EURO")
+    print("[2] DOLAR")
+    print("[3] RUBLE")
+
     print(" ")
+    walut = int(input("Jaka waluta ===> "))
+    kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
+    print(" ")
+
+    if walut == 1:
+        print("na euro")
+        euro = kwota * 4.60
+        print(kwota)
+    elif walut == 2:
+        print("na dolar")
+    elif walut == 3:
+        print("na ruble")
 
 
 def adminowania():
