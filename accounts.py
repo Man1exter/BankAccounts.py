@@ -41,8 +41,8 @@ def menu1():
  print("[1] ====> ZALOGUJ <====")
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
- print("[4] ====> PRZELICZNIK WALUT <====")
- print("[5] ====> BALANS KONT MAN1EXTER'A <====")
+ print("[4] ====> BALANS KONT MAN1EXTER'A <====")
+ print("[5] ====> PRZELICZNIK WALUT <====")
  print("=========================")
  print("[6] ====> * * ADMINISTRACJA * * <====")
 
@@ -226,8 +226,17 @@ def adminowania():
 def balance():
     print(" ")
     print(" ")
-    print(" = > BALANS sfery kont [MAN1EXTER'A] < = ")
+    print(" = > BALANS sfery kont [[[MAN1EXTER'A]]] < = ")
     print(" ")
+    i = 0
+    while i < 10:
+     print("chce konto..")
+     time.sleep(1)
+     print("nie chce konta")
+     print(" ")
+     i += 1
+     if i < 10:
+        print("nie moge sie zdecydowac")
     
 timen()
 menu1()
