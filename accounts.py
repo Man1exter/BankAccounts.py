@@ -192,28 +192,33 @@ def walutowy():
     kwota = input("Jaka kwota chcesz przekonwertowac ===> [zł] ===> ")
     print(" ")
 
+    ile1 = float(4.60)
+    ile2 = float(3.90)
+    ile3 = float(0.051)
+    ile4 = float(0.0000019653)
+
     if walut == 1:
 
         print("na euro")
-        euro = kwota * 4.60
+        euro = kwota * ile1
         print(kwota + " na " + euro)
         
     elif walut == 2:
 
         print("na dolar")
-        dolar = kwota * 3.91
+        dolar = kwota * ile2
         print(kwota + " na " + dolar)
 
     elif walut == 3:
 
         print("na ruble")
-        rubla = kwota * 0.051
+        rubla = kwota * ile3
         print(kwota + " na " + rubla)
 
     elif walut == 4:
 
         print("na boliwar")
-        boliwar = kwota * 0.0000019653 
+        boliwar = kwota * ile4
         print(kwota + " na " + boliwar)
 
 def adminowania():
@@ -238,7 +243,7 @@ def balance():
      if i < 10:
         print("nie moge sie zdecydowac")
     
-    
+
 timen()
 menu1()
 logins()
