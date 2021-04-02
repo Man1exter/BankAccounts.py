@@ -39,7 +39,6 @@ def menu1():
  print("[6] ====> * * ADMINISTRACJA * * <====")
 
 
-
 def logins():
     plik = open("konta.txt","a")
     zdarzenie = int(input("[1]ZALOGUJ LUB [2]ZAREJESTRUJ =====> "))
@@ -223,10 +222,6 @@ def balance():
     print(" = > BALANS sfery kont [MAN1EXTER'A] < = ")
     print(" ")
     
-    i = 0
-    while KontoBankowe < 10:
-        i += 1
-
 
 menu1()
 logins()
