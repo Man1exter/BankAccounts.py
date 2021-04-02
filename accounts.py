@@ -68,10 +68,6 @@ def logins():
         elif celMenu == 3:
             wplata()
         elif celMenu == 4:
-            walutowy()
-        elif celMenu == 4:
-            balance()
-        elif celMenu == 6:
             exit()
         
     elif zdarzenie == 2:
@@ -123,6 +119,12 @@ def logins():
         info()
 
     elif zdarzenie == 4:
+        balance()
+    
+    elif zdarzenie == 5:
+        walutowy()
+
+    elif zdarzenie == 6:
         adminowania()
 
     else:
@@ -216,7 +218,15 @@ def adminowania():
     print(tekstX)
 
 def balance():
+    print(" ")
+    print(" ")
     print(" = > BALANS sfery kont [MAN1EXTER'A] < = ")
+    print(" ")
+    
+    i = 0
+    while KontoBankowe < 10:
+        i += 1
+
 
 menu1()
 logins()
