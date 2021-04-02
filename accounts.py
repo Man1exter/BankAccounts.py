@@ -9,6 +9,11 @@ class KontoBankowe:
         self.zawod = zawod
         self.__stan = __stan
 
+    def __iniy__(self,payments,payments2):
+        self.payments = payments
+        self.payments2 = payments2
+
+
     @property
     def stanKonta(self):
         return self.__stan
@@ -79,6 +84,8 @@ def logins():
         print("DODATKOWE INFORMACJE DO KONTA : ")
         login = input("podaj login => ")
         haslo = input("podaj haslo => ")
+        payments = input("karta1[blue] czy karta2[red] ==>")
+        payments2 = input("karta3[white] czy karta4[brown] ==>")
 
         if plik.writable():
           plik.write(imie )
@@ -96,6 +103,10 @@ def logins():
           plik.write( login )
           plik.write(" ")
           plik.write( haslo )
+          plik.write(" ")
+          plik.write( payments )
+          plik.write(" ")
+          plik.write( payments2 )
           plik.write(" ")
           plik.write("\n")
         plik.close()
@@ -171,18 +182,25 @@ def walutowy():
     print(" ")
 
     if walut == 1:
+
         print("na euro")
         euro = kwota * 4.60
         print(kwota + " na " + euro)
+        
     elif walut == 2:
+
         print("na dolar")
         dolar = kwota * 3.91
         print(kwota + " na " + dolar)
+
     elif walut == 3:
+
         print("na ruble")
         rubla = kwota * 0.051
         print(kwota + " na " + rubla)
+
     elif walut == 4:
+
         print("na boliwar")
         boliwar = kwota * 0.0000019653 
         print(kwota + " na " + boliwar)
