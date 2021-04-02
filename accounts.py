@@ -34,7 +34,6 @@ def timen():
         print(ctime.tm_year,ctime.tm_mon,ctime.tm_isdst)
         print(ctime.tm_hour,ctime.tm_min,ctime.tm_sec,sep=":")
         
-
 def menu1():
  print("WITAJ W BANKU [MAN1EXTERA]")
  print("=========================")
@@ -45,7 +44,6 @@ def menu1():
  print("[5] ====> PRZELICZNIK WALUT <====")
  print("=========================")
  print("[6] ====> * * ADMINISTRACJA * * <====")
-
 
 def logins():
     plik = open("konta.txt","a")
@@ -123,16 +121,12 @@ def logins():
 
     elif zdarzenie == 3:
         info()
-
     elif zdarzenie == 4:
         balance()
-    
     elif zdarzenie == 5:
         walutowy()
-
     elif zdarzenie == 6:
         adminowania()
-
     else:
         print("nie wiem co chcesz zrobic..,ZACZNIJ OD NOWA")
 
@@ -243,7 +237,6 @@ def balance():
      if i < 10:
         print("nie moge sie zdecydowac")
     
-
 timen()
 menu1()
 logins()
