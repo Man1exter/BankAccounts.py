@@ -34,8 +34,9 @@ def menu1():
  print("[2] ====> ZAREJESTRUJ <====")
  print("[3] ====> INFORMACJE O KONTACH UZYTKOWNIKOW <====")
  print("[4] ====> PRZELICZNIK WALUT <====")
+ print("[5] ====> BALANS KONT MAN1EXTER'A <====")
  print("=========================")
- print("[5] ====> * * ADMINISTRACJA * * <====")
+ print("[6] ====> * * ADMINISTRACJA * * <====")
 
 
 
@@ -68,7 +69,9 @@ def logins():
             wplata()
         elif celMenu == 4:
             walutowy()
-        elif celMenu == 5:
+        elif celMenu == 4:
+            balance()
+        elif celMenu == 6:
             exit()
         
     elif zdarzenie == 2:
@@ -211,6 +214,9 @@ def adminowania():
     if plik.readable():
         tekstX = plik.read()
     print(tekstX)
+
+def balance():
+    print(" = > BALANS sfery kont [MAN1EXTER'A] < = ")
 
 menu1()
 logins()
