@@ -238,6 +238,7 @@ def balance():
      if i < 10:
         print("nie moge sie zdecydowac")
     
+    
 timen()
 menu1()
 logins()
