@@ -205,7 +205,6 @@ def walutowy():
         boliwar = kwota * 0.0000019653 
         print(kwota + " na " + boliwar)
 
-
 def adminowania():
     print("WITAJ W PANELU ADMINA")
     plik = open("konta.txt","r")
